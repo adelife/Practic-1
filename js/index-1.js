@@ -63,10 +63,26 @@
  *! Робити перевірку, що користувач ввів саме число,
  *! а не довільний набір символів не потрібно.
  */
-let number = prompt(`Enter your number`);
-let total = 0;
-while (number !== null) {
-  total += Number(number);
-  number = prompt(`Enter your number`);
+// let number = prompt(`Enter your number`);
+// let total = 0;
+// while (number !== null) {
+//   total += Number(number);
+//   number = prompt(`Enter your number`);
+// }
+// alert(`Загальна сума введених чисел дорівнює ${total}`);
+
+/**
+ *? Напишіть цикл, який пропонує ввести
+ *? число більше 100 через prompt.
+ *? Якщо відвідувач ввів інше число – попросити
+ *? ввести ще раз і таке інше.
+ *? Цикл повинен питати число, поки відвідувач не
+ *? введе число більше 100 або не натисне кнопку
+ *? Скасування в prompt
+ */
+
+let number = prompt("Enter number > 100");
+while (number <= 100 && number!==null )
+{
+  number = prompt("Enter number > 100");
 }
-alert(`Загальна сума введених чисел дорівнює ${total}`);
