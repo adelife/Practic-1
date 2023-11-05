@@ -81,8 +81,24 @@
  *? Скасування в prompt
  */
 
-let number = prompt("Enter number > 100");
-while (number <= 100 && number!==null )
-{
-  number = prompt("Enter number > 100");
+// let number = prompt("Enter number > 100");
+// while (number <= 100 && number!==null )
+// {
+//   number = prompt("Enter number > 100");
+// }
+
+/**
+*? За кожен місяць податкова нараховує на ЗП розробника 5% від суми.
+*? Напишіть консольну функцію, на яку користувач вводить суму зп
+*? і кількість місяців за допомогою prompt() не забуваємо, що prompt повертає рядок.
+*? Вираховує суму зп за вказаний період.
+*? Для обчислення суми з урахуванням відсотків використовуйте цикл for.
+
+ */
+let mounth = prompt("Enter mounth");
+let selery = prompt("Enter selery");
+let total = 0;
+for (let i = 1; i <= mounth; i += 1){
+  total += selery * 0.95;
 }
+alert(total);
