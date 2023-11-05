@@ -32,7 +32,20 @@
  70 === 01:10
  */
 
-const time = prompt('Enter your number!');
-const hour = String(Math.floor(time / 60)).padStart(2, '0');
-const minutes = String(time % 60).padStart(2, '0');
+const time = prompt("Enter your number!");
+const hour = String(Math.floor(time / 60)).padStart(2, "0");
+const minutes = String(time % 60).padStart(2, "0");
 console.log(`${hour}:${minutes}`);
+
+/**
+ *? Напишіть цикл, який виводить у консоль
+ *? всі парні числа  від max до min  за спаданням
+ */
+
+const max = 50;
+const min = 23;
+for (let i = max; i >= min; i--) {
+  if (i % 2 !== 0) {
+    console.log(i);
+  }
+}
