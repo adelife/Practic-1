@@ -95,10 +95,43 @@
 *? Для обчислення суми з урахуванням відсотків використовуйте цикл for.
 
  */
-let mounth = prompt("Enter mounth");
-let selery = prompt("Enter selery");
-let total = 0;
-for (let i = 1; i <= mounth; i += 1){
-  total += selery * 0.95;
+// let mounth = prompt("Enter mounth");
+// let selery = prompt("Enter selery");
+// let total = 0;
+// for (let i = 1; i <= mounth; i += 1){
+//   total += selery * 0.95;
+// }
+// alert(total);
+
+/**
+*? Напишіть код, який запитуватиме
+*? логін за допомогою prompt та логувати результат
+*? у консоль браузера
+    
+*? Якщо відвідувач вводить "Адмін",
+*? то prompt запитує пароль.
+*? Якщо нічого не ввели або натиснуто клавішу Esc
+*? вивести рядок "Скасовано"
+*? В іншому випадку вивести рядок "Я вас не знаю"
+    
+*? Пароль перевіряти так:
+*? Якщо введено пароль "Я головний",
+*? то вивести рядок "Здрастуйте!"
+*? інакше виводити рядок "Невірний пароль!"
+ */
+
+let login = prompt('Enter your login');
+console.log(login);
+
+if (login === 'Адмін') {
+  let password = prompt('Enter your password');
+  if (password === 'Я головний') {
+    console.log('Здрастуйте!');
+  } else {
+    console.log('Невірний пароль!');
+  }
+} else if (!login) {
+  console.log('Скасовано');
+} else {
+  console.log('Я вас не знаю');
 }
-alert(total);
