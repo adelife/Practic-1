@@ -77,22 +77,50 @@
 // *? Надайте ід для кожного продукту
 // */
 
-const fruits = [
-  { name: 'apple', price: 200 },
-  { name: 'orange', price: 300 },
-  { name: 'grapes', price: 750 },
-];
+// const fruits = [
+//   { name: 'apple', price: 200 },
+//   { name: 'orange', price: 300 },
+//   { name: 'grapes', price: 750 },
+// ];
 
-function updateFruits(array) {
-  let newFruits = [];
-  let id = 1;
-  for (const obj of array) {
-    const copyObj = { id, ...obj, price: obj.price * 0.8 };
-    newFruits.push(copyObj);
-    id += 1;
-  }
-  return newFruits;
-}
+// function updateFruits(array) {
+//   let newFruits = [];
+//   let id = 1;
+//   for (const obj of array) {
+//     const copyObj = { id, ...obj, price: obj.price * 0.8 };
+//     newFruits.push(copyObj);
+//     id += 1;
+//   }
+//   return newFruits;
+// }
 
-console.log(updateFruits(fruits));
-console.log(fruits);
+// console.log(updateFruits(fruits));
+// console.log(fruits);
+
+/**
+ *? Записати масив, const arr = ['BEST', 'the', 'foo', 'is', 'JS' ]
+ *? розвернути масив,
+ *? вирізати foo,
+ *? перевести його в рядок розділений пробілами
+ *? Очікуваний результат "JS is the BEST"
+ */
+
+/* массив arr не має мутуватися */
+
+const arr = ["BEST", "the", "foo", "is", "JS"];
+// const copyArr = [...arr];
+// copyArr.reverse();
+// const index = copyArr.indexOf("foo");
+// copyArr.splice(index, 1);
+// const string = copyArr.join(" ");
+
+// console.log(arr);
+// console.log(copyArr);
+// console.log(string);
+
+const rezult = arr
+  .slice(0, arr.indexOf("foo"))
+  .concat(arr.slice(arr.indexOf("foo") + 1))
+  .reverse()
+  .join(" ");
+console.log(rezult);
