@@ -53,20 +53,46 @@
  *? з таким ім'ям, ціною та кількістю з об'єкта
  */
 
-const stones = [
-  { name: "Изумруд", price: 1300, quantity: 4 },
-  { name: "Бриллиант", price: 2700, quantity: 6 },
-  { name: "Сапфир", price: 400, quantity: 7 },
-  { name: "Щебень", price: 150, quantity: 100 },
+// const stones = [
+//   { name: "Изумруд", price: 1300, quantity: 4 },
+//   { name: "Бриллиант", price: 2700, quantity: 6 },
+//   { name: "Сапфир", price: 400, quantity: 7 },
+//   { name: "Щебень", price: 150, quantity: 100 },
+// ];
+
+// function calcTotalPrice(someStones, stonesName) {
+//   for (const obj of someStones) {
+//     if (stonesName === obj.name) {
+//       return obj.price * obj.quantity;
+//     }
+//   }
+//   return `Камінь не знайдено`;
+// }
+
+// console.log(calcTotalPrice(stones, "аааа"));
+
+///**
+// *? Напишіть функцію, яка приймає массив об'єктів і повертає новий массив
+// *? Зробіть знижку 20 % на всі фрукти у масиві
+// *? Надайте ід для кожного продукту
+// */
+
+const fruits = [
+  { name: 'apple', price: 200 },
+  { name: 'orange', price: 300 },
+  { name: 'grapes', price: 750 },
 ];
 
-function calcTotalPrice(someStones, stonesName) {
-  for (const obj of someStones) {
-    if (stonesName === obj.name) {
-      return obj.price * obj.quantity;
-    }
+function updateFruits(array) {
+  let newFruits = [];
+  let id = 1;
+  for (const obj of array) {
+    const copyObj = { id, ...obj, price: obj.price * 0.8 };
+    newFruits.push(copyObj);
+    id += 1;
   }
-  return `Камінь не знайдено`;
+  return newFruits;
 }
 
-console.log(calcTotalPrice(stones, "аааа"));
+console.log(updateFruits(fruits));
+console.log(fruits);
