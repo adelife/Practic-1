@@ -120,18 +120,18 @@
 *? інакше виводити рядок "Невірний пароль!"
  */
 
-let login = prompt('Enter your login');
-console.log(login);
+// let login = prompt('Enter your login');
+// console.log(login);
 
-if (login === 'Адмін') {
-  let password = prompt('Enter your password');
-  if (password === 'Я головний') {
-    console.log('Здрастуйте!');
-  } else {
-    console.log('Невірний пароль!');
-  }
-} else if (!login) {
-  console.log('Скасовано');
-} else {
-  console.log('Я вас не знаю');
-}
+// if (login === 'Адмін') {
+//   let password = prompt('Enter your password');
+//   if (password === 'Я головний') {
+//     console.log('Здрастуйте!');
+//   } else {
+//     console.log('Невірний пароль!');
+//   }
+// } else if (!login) {
+//   console.log('Скасовано');
+// } else {
+//   console.log('Я вас не знаю');
+// }
