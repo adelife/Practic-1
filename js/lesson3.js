@@ -78,29 +78,42 @@
  *? доступ до яких зроби через геттер та сеттер login email
  */
 
- class Client {
-  #login;
-  #email;
-  constructor (login, email){
-this.#login = login;
-this.#email = email;
-  }
-  get login (){
-    return this.#login;
-  }
-  set login (newLogin){
-    this.#login = newLogin;
-  }
-  get email (){
-    return this.#email;
-  }
-  set email (newEmail){
-    this.#email = newEmail;
-  }
- }
- const newClient = new Client(`John`, `Johnmail`);
- console.log(newClient);
-newClient.email = `JohnNewEmail`;
-console.log(newClient.email);
+//  class Client {
+//   #login;
+//   #email;
+//   constructor (login, email){
+// this.#login = login;
+// this.#email = email;
+//   }
+//   get login (){
+//     return this.#login;
+//   }
+//   set login (newLogin){
+//     this.#login = newLogin;
+//   }
+//   get email (){
+//     return this.#email;
+//   }
+//   set email (newEmail){
+//     this.#email = newEmail;
+//   }
+//  }
+//  const newClient = new Client(`John`, `Johnmail`);
+//  console.log(newClient);
+// newClient.email = `JohnNewEmail`;
+// console.log(newClient.email);
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+console.log(checkBrackets(someFn));
 
 
