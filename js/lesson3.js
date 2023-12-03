@@ -28,20 +28,43 @@
 *? Очікуваний результат {js: 3, nodejs: 3, html: 2, css: 2, react: 2}
 
  */
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "nodejs"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
-  { id: "003", likes: 8, tags: ["css", "react"] },
-  { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "nodejs"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 17, tags: ["html", "js", "nodejs"] },
+//   { id: "003", likes: 8, tags: ["css", "react"] },
+//   { id: "004", likes: 0, tags: ["js", "nodejs", "react"] },
+// ];
 
-function counterTags(tweets) {
-  const newArray = tweets.flatMap((tweet) => tweet.tags);
-  console.log(newArray);
-  return newArray.reduce((acc, tag) => {
-    console.log(acc);
-    return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
-  }, {});
-}
-console.log(counterTags(tweets));
+// function counterTags(tweets) {
+//   const newArray = tweets.flatMap((tweet) => tweet.tags);
+//   console.log(newArray);
+//   return newArray.reduce((acc, tag) => {
+//     console.log(acc);
+//     return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
+//   }, {});
+// }
+// console.log(counterTags(tweets));
+
+/**
+ *? З об'єкту concerts потрібно отримати масив
+ *? в якому будуть лише імена міст.
+ *? З масиву потрібно прибрати міста, в яких концерт уже пройшов і
+ *? відсортувати їх у хронологічному порядку.
+ *? Результат вивести у консоль.
+ *? Очікуваний результат ["Одеса", "Умань", "Харків"]
+ */
+const concerts = {
+  Київ: new Date("2020-04-01"),
+  Умань: new Date("2025-07-02"),
+  Вінниця: new Date("2020-04-21"),
+  Одеса: new Date("2025-03-15"),
+  Хмельницький: new Date("2020-04-18"),
+  Харків: new Date("2025-07-10"),
+};
+
+const towns = Object.keys(concerts);
+const filterTowns = towns
+  .filter((town) => concerts[town] > new Date())
+  .sort((a, b) => concerts[a] - concerts[b]);
+console.log(filterTowns);
