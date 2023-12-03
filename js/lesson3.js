@@ -37,11 +37,11 @@ const tweets = [
 ];
 
 function counterTags(tweets) {
-  return tweets
-    .flatMap((tweet) => tweet.tags)
-    .reduce((acc, tag) => {
-      console.log(acc);
-      return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
-    }, {});
+  const newArray = tweets.flatMap((tweet) => tweet.tags);
+  console.log(newArray);
+  return newArray.reduce((acc, tag) => {
+    console.log(acc);
+    return { ...acc, [tag]: acc[tag] ? acc[tag] + 1 : 1 };
+  }, {});
 }
 console.log(counterTags(tweets));
