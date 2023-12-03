@@ -107,20 +107,20 @@
 
 /* массив arr не має мутуватися */
 
-const arr = ["BEST", "the", "foo", "is", "JS"];
-// const copyArr = [...arr];
-// copyArr.reverse();
-// const index = copyArr.indexOf("foo");
-// copyArr.splice(index, 1);
-// const string = copyArr.join(" ");
+// const arr = ["BEST", "the", "foo", "is", "JS"];
+// // const copyArr = [...arr];
+// // copyArr.reverse();
+// // const index = copyArr.indexOf("foo");
+// // copyArr.splice(index, 1);
+// // const string = copyArr.join(" ");
 
-// console.log(arr);
-// console.log(copyArr);
-// console.log(string);
+// // console.log(arr);
+// // console.log(copyArr);
+// // console.log(string);
 
-const rezult = arr
-  .slice(0, arr.indexOf("foo"))
-  .concat(arr.slice(arr.indexOf("foo") + 1))
-  .reverse()
-  .join(" ");
-console.log(rezult);
+// const rezult = arr
+//   .slice(0, arr.indexOf("foo"))
+//   .concat(arr.slice(arr.indexOf("foo") + 1))
+//   .reverse()
+//   .join(" ");
+// console.log(rezult);
