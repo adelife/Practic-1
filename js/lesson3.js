@@ -54,17 +54,66 @@
  *? Результат вивести у консоль.
  *? Очікуваний результат ["Одеса", "Умань", "Харків"]
  */
-const concerts = {
-  Київ: new Date("2020-04-01"),
-  Умань: new Date("2025-07-02"),
-  Вінниця: new Date("2020-04-21"),
-  Одеса: new Date("2025-03-15"),
-  Хмельницький: new Date("2020-04-18"),
-  Харків: new Date("2025-07-10"),
-};
+// const concerts = {
+//   Київ: new Date("2020-04-01"),
+//   Умань: new Date("2025-07-02"),
+//   Вінниця: new Date("2020-04-21"),
+//   Одеса: new Date("2025-03-15"),
+//   Хмельницький: new Date("2020-04-18"),
+//   Харків: new Date("2025-07-10"),
+// };
 
-const towns = Object.keys(concerts);
-const filterTowns = towns
-  .filter((town) => concerts[town] > new Date())
-  .sort((a, b) => concerts[a] - concerts[b]);
-console.log(filterTowns);
+// const towns = Object.keys(concerts);
+// const filterTowns = towns
+//   .filter((town) => concerts[town] > new Date())
+//   .sort((a, b) => concerts[a] - concerts[b]);
+// console.log(filterTowns);
+
+//TODO:=============================================
+
+/**
+ *? Напиши клас Client який створює об'єкт
+ *? з ​​властивостями login email
+ *? Оголоси приватні властивості #login #email,
+ *? доступ до яких зроби через геттер та сеттер login email
+ */
+
+//  class Client {
+//   #login;
+//   #email;
+//   constructor (login, email){
+// this.#login = login;
+// this.#email = email;
+//   }
+//   get login (){
+//     return this.#login;
+//   }
+//   set login (newLogin){
+//     this.#login = newLogin;
+//   }
+//   get email (){
+//     return this.#email;
+//   }
+//   set email (newEmail){
+//     this.#email = newEmail;
+//   }
+//  }
+//  const newClient = new Client(`John`, `Johnmail`);
+//  console.log(newClient);
+// newClient.email = `JohnNewEmail`;
+// console.log(newClient.email);
+
+/*Напишіть функцію checkBrackets(str) яка приймає рядок жс коду (someFn)
+  і перевіряє правильність закриття дужок () {} []
+  Якщо рядок містить коректний код функція повертає true.
+  В іншому випадку повертає false
+*/
+
+const someFn = `function foo() {
+  const arr = [1, 2, 3];
+  console.log(arr);
+}`;
+
+console.log(checkBrackets(someFn));
+
+
