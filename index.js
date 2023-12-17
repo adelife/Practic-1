@@ -17,21 +17,21 @@
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
-const firstInputEl = document.querySelector("#leftSwapInput");
-const secondInputEl = document.querySelector("#rightSwapInput");
-const swapBtnEl = document.querySelector("#swapButton");
-swapBtnEl.addEventListener("click", () => {
-  //1 варінат
-  const firstInputValue = firstInputEl.value;
-  const secondInputValue = secondInputEl.value;
-  secondInputEl.value = firstInputValue;
-  firstInputEl.value = secondInputValue;
+// const firstInputEl = document.querySelector("#leftSwapInput");
+// const secondInputEl = document.querySelector("#rightSwapInput");
+// const swapBtnEl = document.querySelector("#swapButton");
+// swapBtnEl.addEventListener("click", () => {
+//   //1 варінат
+//   const firstInputValue = firstInputEl.value;
+//   const secondInputValue = secondInputEl.value;
+//   secondInputEl.value = firstInputValue;
+//   firstInputEl.value = secondInputValue;
 
-  //2 варінат
-  // const firstInputValue = firstInputEl.value;
-  //   firstInputEl.value = secondInputEl.value;
-  //   secondInputEl.value = firstInputValue;
-});
+//2 варінат
+// const firstInputValue = firstInputEl.value;
+//   firstInputEl.value = secondInputEl.value;
+//   secondInputEl.value = firstInputValue;
+// });
 //TODO:==============================================
 /*
 Завдання 3
@@ -39,6 +39,17 @@ swapBtnEl.addEventListener("click", () => {
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
+const formInputRef = document.querySelector("#passwordInput");
+const btnRef = document.querySelector("#passwordButton");
+btnRef.addEventListener("click", () => {
+  if (formInputRef.getAttribute("type") === "password") {
+    formInputRef.setAttribute("type", "text");
+    btnRef.textContent = "Приховати";
+    return;
+  }
+  formInputRef.setAttribute("type", "password");
+  btnRef.textContent = "Розкрити";
+});
 
 //TODO:==============================================
 /*
