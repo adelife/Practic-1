@@ -4,6 +4,12 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
+const formInputRef = document.querySelector("#alertInput")
+const btnRef = document.querySelector("#alertButton")
+btnRef.addEventListener("click", () => {
+    console.log(formInputRef.value);
+})
+
 //TODO:==============================================
 /*
 Завдання 2
