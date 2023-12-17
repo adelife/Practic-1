@@ -4,11 +4,11 @@
 Натискання на кнопку "SHOW ME" має виводити значення з поля введення (дивіться на елементи в html-розмітці)
 */
 
-const formInputRef = document.querySelector("#alertInput")
-const btnRef = document.querySelector("#alertButton")
-btnRef.addEventListener("click", () => {
-    console.log(formInputRef.value);
-})
+// const formInputRef = document.querySelector("#alertInput")
+// const btnRef = document.querySelector("#alertButton")
+// btnRef.addEventListener("click", () => {
+//     console.log(formInputRef.value);
+// })
 
 //TODO:==============================================
 /*
@@ -17,6 +17,21 @@ btnRef.addEventListener("click", () => {
 Ви можете натиснути на неї кілька разів або вручну змінити вміст інпутів.
 */
 
+const firstInputEl = document.querySelector("#leftSwapInput");
+const secondInputEl = document.querySelector("#rightSwapInput");
+const swapBtnEl = document.querySelector("#swapButton");
+swapBtnEl.addEventListener("click", () => {
+  //1 варінат
+  const firstInputValue = firstInputEl.value;
+  const secondInputValue = secondInputEl.value;
+  secondInputEl.value = firstInputValue;
+  firstInputEl.value = secondInputValue;
+
+  //2 варінат
+  // const firstInputValue = firstInputEl.value;
+  //   firstInputEl.value = secondInputEl.value;
+  //   secondInputEl.value = firstInputValue;
+});
 //TODO:==============================================
 /*
 Завдання 3
