@@ -39,41 +39,53 @@
 "Розкрити", при повторному натисканні текст знову стає доступним
 і кнопка набуває початкового вигляду.
 */
-const formInputRef = document.querySelector('#passwordInput');
-const btnRef = document.querySelector('#passwordButton');
-btnRef.addEventListener('click', () => {
-  if (formInputRef.getAttribute('type') === 'password') {
-    formInputRef.setAttribute('type', 'text');
-    btnRef.textContent = 'Приховати';
-    return;
-  }
-  formInputRef.setAttribute('type', 'password');
-  btnRef.textContent = 'Розкрити';
-});
+// const formInputRef = document.querySelector('#passwordInput');
+// const btnRef = document.querySelector('#passwordButton');
+// btnRef.addEventListener('click', () => {
+//   if (formInputRef.getAttribute('type') === 'password') {
+//     formInputRef.setAttribute('type', 'text');
+//     btnRef.textContent = 'Приховати';
+//     return;
+//   }
+//   formInputRef.setAttribute('type', 'password');
+//   btnRef.textContent = 'Розкрити';
+// });
 
 //TODO:==============================================
 /*
 Завдання 4
 Кнопка "Зменшити" робить квадрат менше на 10 пікселів,  "Збільшити" - більше на 10 пікселів.
 */
-const decreaseBtnRef = document.querySelector('#decrease');
-const increaseBtnRef = document.querySelector('#increase');
-const boxRef = document.querySelector('#box');
-decreaseBtnRef.addEventListener('click', () => {
-  const sizeBox = parseInt(getComputedStyle(boxRef).width);
-  boxRef.style.width = sizeBox - 10 + 'px';
-  boxRef.style.height = sizeBox - 10 + 'px';
-});
-increaseBtnRef.addEventListener('click', () => {
-  const sizeBox = parseInt(getComputedStyle(boxRef).width);
-  boxRef.style.width = sizeBox + 10 + 'px';
-  boxRef.style.height = sizeBox + 10 + 'px';
-});
+// const decreaseBtnRef = document.querySelector('#decrease');
+// const increaseBtnRef = document.querySelector('#increase');
+// const boxRef = document.querySelector('#box');
+// decreaseBtnRef.addEventListener('click', () => {
+//   const sizeBox = parseInt(getComputedStyle(boxRef).width);
+//   boxRef.style.width = sizeBox - 10 + 'px';
+//   boxRef.style.height = sizeBox - 10 + 'px';
+// });
+// increaseBtnRef.addEventListener('click', () => {
+//   const sizeBox = parseInt(getComputedStyle(boxRef).width);
+//   boxRef.style.width = sizeBox + 10 + 'px';
+//   boxRef.style.height = sizeBox + 10 + 'px';
+// });
 //TODO:==============================================
 /*
 Завдання 5
 Додайте слухач кліку на window і визначте чи клікнув користувач у дів з id="place".
 */
+// window.addEventListener('click', () => {});
+// аналогічно без window:
+
+addEventListener('click', event => {
+  console.log(event.currentTarget);
+  console.log(event.target);
+  if (event.target.id === 'place') {
+    console.log(true);
+  } else {
+    console.log(false);
+  }
+});
 
 //TODO:==============================================
 /*
