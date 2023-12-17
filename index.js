@@ -77,15 +77,15 @@
 // window.addEventListener('click', () => {});
 // аналогічно без window:
 
-addEventListener('click', event => {
-  console.log(event.currentTarget);
-  console.log(event.target);
-  if (event.target.id === 'place') {
-    console.log(true);
-  } else {
-    console.log(false);
-  }
-});
+// addEventListener('click', event => {
+//   console.log(event.currentTarget);
+//   console.log(event.target);
+//   if (event.target.id === 'place') {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// });
 
 //TODO:==============================================
 /*
@@ -93,6 +93,14 @@ addEventListener('click', event => {
 Натиснувши кнопку "Подвоювати", збільшити значення
 у кожному елементі списку у 2 рази
 */
+const listItemsArrayRef = document.querySelectorAll('.listItem');
+console.log(listItemsArrayRef);
+const btnDoubleRef = document.querySelector('#double');
+btnDoubleRef.addEventListener('click', () => {
+  listItemsArrayRef.forEach(item => {
+    item.textContent = BigInt(item.textContent) ** 2n;
+  });
+});
 
 //TODO:==============================================
 /*
